@@ -1,14 +1,19 @@
 <%- include('partials/header') %> 
 
+
 <ul class="pokemon-list reset-list row">
     <% for (const pokemon of pokemons) {%>
         <li class="p-3 col-lg-4">
-            <figure class="p-3">
-                <img src="/img/<%= pokemon.numero%>.png" alt="<%= pokemon.nom %>">
-                <figcaption>#<%= pokemon.numero %> <%= pokemon.nom %></figcaption>
-            </figure>
-        </li>
+            <a href="/pokemon/<%= pokemon.id %> ">    
+                <figure class="p-3">
+                    <img src="/img/<%= pokemon.numero%>.png" alt="<%= pokemon.nom %>">
+                    <figcaption>#<%= pokemon.numero %> <%= pokemon.nom %></figcaption>
+                </figure>
+            </a>     
+        </li>  
     <%}%>
 </ul>
+
+
 
 <%- include('partials/footer') %> 

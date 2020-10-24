@@ -127,7 +127,7 @@ module.exports = dataMapper;
 
 ## 11 - dans le mainController
 
-Ajouter la méthode home pour gérer la route \
+Ajouter la méthode home pour gérer la route '/'
 
 ```
 const mainController = {

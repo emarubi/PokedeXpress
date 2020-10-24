@@ -84,6 +84,15 @@ header a, header a:hover {
 
 /* Fiche */
 
+.pokemon-detail {
+    display: flex;
+}
+
+.pokemon-detail h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
 .pokemon-detail .fiche{
     background-color: #982D2C;
     border-radius: 1em;

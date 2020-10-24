@@ -1,0 +1,95 @@
+<%- include('partials/header') %> 
+
+<section class="pokemon-detail row">
+    <div class="col-lg-12">
+        <div class="container-fluid">
+            <header class="row">
+                <h2 class="col-lg-12 text-center text-white mb-3">Détails de <%=pokemon.nom%></h2>
+            </header>
+            <main class="row">
+                <div class="col-lg-4 image">
+                    <img src="/img/<%=pokemon.numero%>.png">
+                </div>
+                <div class="col-lg-8 fiche p-3">
+                    <h3 class="mt-4">#<%=pokemon.numero%> <%=pokemon.nom%></h3>
+                    <ul class="type-list reset-list d-inline-flex mt-2 mb-3">
+                        <% for(const type of pokemon.types) { %>
+                            <li><a href="/type/<%=type.id%>" class="rounded d-block mr-2 p-2"
+                                style="background-color: #<%=type.color%>"><%=type.name%></a></li>
+                        <% } %>
+                    </ul>
+                    <h4 class="mb-4">Statistiques</h4>
+
+                    <div class="stats container-fluid.no-gutters mb-4">
+
+                        <div class="row">
+                            <div class="col-2">PV</div>
+                            <div class="col-2"><%=pokemon.pv%></div>
+                            <div class="col-8">
+                                <div class="status-bar rounded overflow-hidden"><span
+                                    style="width:<%=(pokemon.pv/255)*100%>%"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">PV</div>
+                            <div class="col-2"><%=pokemon.attaque%></div>
+                            <div class="col-8">
+                                <div class="status-bar rounded overflow-hidden"><span
+                                    style="width:<%=(pokemon.attaque/255)*100%>%"></span></div>
+                            </div>
+                        </div>    
+
+                        <div class="row">
+                            <div class="col-2">PV</div>
+                            <div class="col-2"><%=pokemon.defense%></div>
+                            <div class="col-8">
+                                <div class="status-bar rounded overflow-hidden"><span
+                                    style="width:<%=(pokemon.defense/255)*100%>%"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">PV</div>
+                            <div class="col-2"><%=pokemon.attaque_spe%></div>
+                            <div class="col-8">
+                                <div class="status-bar rounded overflow-hidden"><span
+                                    style="width:<%=(pokemon.attaque_spe/255)*100%>%"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">PV</div>
+                            <div class="col-2"><%=pokemon.defense_spe%></div>
+                            <div class="col-8">
+                                <div class="status-bar rounded overflow-hidden"><span
+                                    style="width:<%=(pokemon.defense_spe/255)*100%>%"></span>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="row">
+                            <div class="col-2">PV</div>
+                            <div class="col-2"><%=pokemon.vitesse%></div>
+                            <div class="col-8">
+                                <div class="status-bar rounded overflow-hidden"><span
+                                    style="width:<%=(pokemon.vitesse/255)*100%>%"></span>
+                                </div>
+                            </div>
+                        </div>  
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <footer class="text-center">
+            <a href="/">Revenir à la liste</a>
+        </footer>
+    </div>
+</div>
+</section>
+
+<%- include('partials/footer') %> 
